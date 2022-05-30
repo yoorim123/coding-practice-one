@@ -1,0 +1,377 @@
+
+.visual{
+  height: 960px; background: url(../images/visual.png) no-repeat center / cover; color: #fff; position: relative;
+}
+.visual .inner-header{
+  width: 95%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding-top: 100px;
+}
+.visual .inner-header h1{
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
+.visual .inner-header .gnb, 
+.visual .inner-header .util ul,
+.visual .inner-header .r-menu
+{display: flex;} 
+
+
+/*gnb*/
+.visual .inner-header .gnb{font-size: 18px;}
+.visual .inner-header .gnb > li {position: relative;}
+.visual .inner-header .gnb > li + li{margin-left: 60px;}
+.visual .inner-header .gnb > li > a{display: block; line-height: 50px;position: relative;} 
+.visual .inner-header .gnb > li > a::before{
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: none;
+}
+/*hover*/
+.visual .inner-header .gnb > li:hover > a::before{
+ display: block;
+}
+
+
+/*0512*/
+/*lnb*/ 
+.visual .inner-header .l-menu .gnb > li .lnb,
+.visual .inner-header .r-menu .gnb > li .lnb 
+{
+  display: flex; 
+  position: absolute; 
+  top: 50px; /**/
+  height: 60px; 
+  background-color: #fff; 
+  border-radius: 50px; 
+  color: #c1b799; 
+  font-size: 16px; 
+  line-height: 1.2;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+/*hover*/
+.visual .inner-header .l-menu .gnb > li:hover .lnb,
+.visual .inner-header .r-menu .gnb > li:hover .lnb 
+{
+  display: flex;
+}
+
+.visual .inner-header .l-menu .gnb > li .lnb a,
+.visual .inner-header .r-menu .gnb > li .lnb a{
+  display: block;
+  padding: 0 20px;
+  position: relative;
+}
+.visual .inner-header .l-menu .gnb > li .lnb a:hover,
+.visual .inner-header .r-menu .gnb > li .lnb a:hover{
+  color: #6c5b2d;
+}
+
+/*1번째 메뉴*/
+.visual .inner-header .l-menu .gnb > li:first-of-type .lnb {
+  width: 450px; 
+  left: -40px;
+}
+
+.visual .inner-header .l-menu .gnb > li:first-of-type .lnb a:after,
+.visual .inner-header .r-menu .gnb > li:nth-of-type(1) .lnb a::after
+{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: #bfa872;
+  transform: translateY(-50%);
+}
+.visual .inner-header .l-menu .gnb > li:first-of-type .lnb li:last-of-type a:after,
+.visual .inner-header .r-menu .gnb > li:first-of-type .lnb li:last-of-type a:after
+{
+  display: none;
+} 
+/*2번째 메뉴*/
+.visual .inner-header .l-menu .gnb > li:nth-of-type(2) .lnb,
+.visual .inner-header .r-menu .gnb > li:nth-of-type(2) .lnb
+{
+width: 200px;
+left: 50%;
+transform: translateX(-50%);
+}
+/*오른쪽 1번째 메뉴*/
+.visual .inner-header .r-menu .gnb > li:nth-of-type(1) .lnb{
+width: 420px;
+left: -40px;
+}
+/*오른쪽 2번째 메뉴*/
+.visual .inner-header .r-menu .gnb > li:nth-of-type(2) .lnb{
+  width: 115px;
+}
+
+.visual .inner-header .gnb .lnb {display: none;}
+.visual .inner-header .gnb .lnb li{font-size: 16px;}
+
+/*right menu*/
+.visual .inner-header .r-menu{align-items: center;} /* 가로 정렬 가운데*/
+
+/*util*/
+.visual .inner-header .util {margin-left: 30px;}
+.visual .inner-header .util ul li{height: 30px; border: 1px solid #fff; border-radius: 50px;; font-size: 14px;}
+.visual .inner-header .util ul li + li{margin-left: 10px;}
+.visual .inner-header .util ul li a{display: block; padding: 0 16px; text-align: center; line-height: 30px;}
+.visual .inner-header .util ul li:hover{color: #6c5b2d; background-color: #fff;}
+
+
+/*all menu*/
+.visual .inner-header .r-menu .all-menu { width: 25px; height: 18px; position: relative; margin-left: 30px; cursor: pointer;}
+.visual .inner-header .r-menu .all-menu span {position: absolute; width: 100%; height: 2px; top: 50%; transform: translateY(-50%); background-color: #fff; left: 0;}
+.visual .inner-header .r-menu .all-menu:before,
+.visual .inner-header .r-menu .all-menu:after{
+  content: ''; position: absolute; width: 100%; height: 2px; background-color: #fff; left: 0;
+}
+.visual .inner-header .r-menu .all-menu:before{top: 0;}
+.visual .inner-header .r-menu .all-menu:after{bottom: 0;}
+
+/* center_text */
+.center_text{
+  position: absolute;
+  width:100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.center_text span{font-size: 29px;}
+.center_text h2{font-size: 89px; font-weight: 700;}
+
+
+/* nav_tab */
+.nav_tab{position: absolute; left: 0; bottom: 0; width: 100%; height: 100px; }
+.nav_tab ol{display: flex; border-top:1px solid #bfa872; height: 100%;}
+.nav_tab ol li{flex: 1; text-align: center; line-height: 100px; border-right:  1px solid #bfa872; color: #eedfbb;}
+.nav_tab ol li.active{background-color: #d2b076;}
+.nav_tab ol li:last-of-type{border-right: none;}
+.nav_tab ol li:nth-child(1) em {font-size: 16px; font-style: normal;}
+.nav_tab ol li:nth-child(1) span {font-size: 28px;}
+.nav_tab ol li:nth-child(2), .nav_tab ol li:nth-child(3) {font-size: 24px;} 
+
+.nav_tab ol li a{display: block; height: 100%;}
+.nav_tab ol li small{position: relative; display: inline-block;}
+.nav_tab ol li small:before, .nav_tab ol li small:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #eedfbb;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translateY(-50%);
+  /*전체선택자는 before랑 after를 포함하지 않음! 가상선택자는 box-sizing을 다시 써줘야 한다!*/
+} 
+.nav_tab ol li small:before {left: -20px;}
+.nav_tab ol li small:after {right: -20px;} 
+/*반대방향으로 가려면 무조건 -를 써줘야 한다!!!*/
+
+.nav_tab ol li:hover * {color: #fff;}
+.nav_tab ol li:hover small:before, 
+.nav_tab ol li:hover small:after{
+  border: 1px solid #fff;
+} 
+
+/*리딩지저스 영상 페이지*/
+section.video{
+  padding: 150px 0;
+  text-align: center;
+  background: linear-gradient(180deg, rgb(245, 242, 235) 40%, rgb(250, 249, 246) 100%);
+}
+section.video div{
+  width: 1170px;
+  margin: 0 auto;
+  height: 658px;
+  border-radius: 15px;
+  background-color: #d2b076;
+  overflow: hidden;
+  /*삐져나온 것을 안 보이게 만들어 줌
+  클리핑 마스크 같다ㅎㅎ!*/
+  box-shadow: 0px 6px 15px 0px rgb(68 56 22 / 30%);
+}
+section.video div > iframe{width: 100%; height: 100%;}
+
+
+section.reading{
+  background: linear-gradient(180deg, rgb(250, 249, 246) 40%, rgb(255, 255, 255) 100%);
+  position: relative; /*라이브러리 페이지와 비교해서 위로 띄우는 것*/
+  z-index: 50;
+}
+section.reading .inner_reading{
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 600px 600px 0 0;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px rgb(68 56 22 / 16%);
+  background: linear-gradient(to bottom, #443816 80%, #FFFFFF) ;
+  padding: 1px;
+} 
+section.reading .inner_reading > div{
+  padding: 150px 80px;
+  background-color: #fff;
+  border-radius: 600px 600px 0 0;
+
+}  
+section.reading .inner_reading ul.day-list{
+  display: flex; justify-content: center;
+}    
+section.reading .inner_reading ul.day-list li{
+  font-size: 20px; width: 50px; height: 50px; margin: 20px 20px 0 20px; color: #292518;
+  border: 1px solid #443816;
+  border-radius: 50%;
+}   
+section.reading .inner_reading ul.day-list li.active,
+section.reading .inner_reading ul.day-list li:hover{
+  color: #fff; background-color: #443816;
+}
+section.reading .inner_reading ul.day-list li a{
+  display: block;
+  line-height: 48px;
+  height: 100%;
+}
+
+section.reading .inner_reading ul.content-list{
+  max-width: 590px;
+  width: 100%;
+  text-align: start;
+  margin: 130px auto 0 auto;
+}
+section.reading .inner_reading ul.content-list h2{
+  font-size: 36px;
+}
+section.reading .inner_reading ul.content-list li p{
+  font-size: 18px;
+  line-height: 1.8;
+  color: #443816;
+  margin-bottom: 40px;
+}
+section.reading .inner_reading ul.content-list li > div{
+  font-size: 18px;
+  margin:  60px 0 30px 0;
+}
+section.reading .inner_reading ul.content-list li > div span{
+  display: inline-block;
+  width: 80px;
+}
+section.reading .inner_reading ul.content-list li > div strong{
+  color: #bfa872;
+  font-weight: 400;
+}
+section.reading .inner_reading ul.content-list li > div div:last-of-type{
+  margin-top: 5px;
+}
+
+/*라이브러리 섹션*/
+section.library{
+  background-color: #f7f5ef;
+  padding: 150px 0;
+}
+section.library .inner_library{
+  width: 90%; max-width: 1170px; margin: 0 auto; display: flex;
+  align-items: center;
+}
+section.library .inner_library .big-title{
+  margin: 0;
+}
+section.library .inner_library .text{
+  width: 40%;
+}
+section.library .inner_library .text p{
+  font-size: 18px; 
+  margin-top: 20px; 
+  font-weight: 300;
+  color: #292518;
+}
+section.library .inner_library .text p strong{
+  font-weight: 700;
+}
+section.library .inner_library .text .btn{
+  font-size: 16px; 
+  color: #fff; 
+  border-radius: 50px; 
+  height: 45px;
+  background-color: #003b5d;
+  width: 160px;
+  box-sizing: content-box; /*'바로가기'가 다 보이게*/
+  padding: 0 10px;
+  margin-top: 60px;
+}
+section.library .inner_library .text .btn a{
+  display: block;
+  text-align: center;
+  line-height: 45px;
+}
+/*슬라이드*/
+section.library .inner_library .slide{
+  width: 60%;
+}
+section.library .inner_library .slide img{
+  display: block;
+  width: 100%;
+  max-width: 602px;
+  margin: 0 auto;
+}
+section.library .inner_library .slide p{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #292518;
+  text-align: center;
+  font-weight: 500;
+}
+section.library .swiper-button-next, section.library .swiper-button-prev{
+color: gray;
+}
+
+/*section book*/
+section.book{
+  padding: 150px 0;
+  background-color: #ecebdc;
+}
+section.book .inner_book{
+  width: 1200px;
+  margin: 0 auto;
+}
+section.book .inner_book .big-title{
+  margin: 0 0 110px 0;
+  text-align: center;
+}
+section.book .inner_book ul{
+  display: flex;
+  justify-content: space-around; 
+}
+section.book .inner_book ul li{
+  width: 280px;
+  text-align: center;
+}
+section.book .inner_book ul img{
+  width: 100%;
+  box-shadow: 0px 18px 18px 0px rgb(68 56 22 / 16%);
+  display: block;
+}
+section.book .inner_book ul li span{
+  display: block;
+  margin-top: 60px;
+  color: #898d26;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /*줄내림 no*/
+}
+section.book .inner_book ul li h4{
+  color: #292518;
+  font-size: 24px;
+  font-weight: 500;
+}

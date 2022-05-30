@@ -1,0 +1,23 @@
+/*common (공통)*/
+/*small-title*/
+.small-title{
+  display: block;
+  color: #6c5b2d;
+  font-size: 20px;
+  padding: 0 10px;
+  position: relative;
+  display: inline-block;
+}
+.small-title::before, .small-title::after{
+  content: url(../images/title.svg);
+  position: absolute;
+}
+.small-title::before{left: 0; transform: translate(-100%, 2px); }
+.small-title::after{right: 0; transform: translate(100%, 2px) scaleX(-1)}
+
+.big-title{
+  color: #443816;
+  font-size: 44px;
+  font-weight: 700;
+  margin: 30px 0 60px 0;
+}
